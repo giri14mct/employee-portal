@@ -1,0 +1,20 @@
+<tr id="<%= dom_id bill %>" class="border border-gray-200">
+  <td class="px-6 py-4 border border-gray-200 whitespace-nowrap">
+    <%= bill.bill_type %>
+  </td>
+  <td class="px-6 py-4 border border-gray-200 whitespace-nowrap">
+    <%= bill.amount %>
+  </td>
+  <td class="px-6 py-4 border border-gray-200 whitespace-nowrap">
+    <%= formatted_date(bill.created_at) %>
+  </td>
+  <td class="px-6 py-4 border border-gray-200 whitespace-nowrap">
+    <%= bill.employee_name%>
+  </td>
+  <td class="px-6 py-4 border border-gray-200 whitespace-nowrap">
+    <%= bill.department_name%>
+  </td>
+  <td class="px-6 py-4 border border-gray-200 whitespace-nowrap">
+    <%= link_to "Edit this Bill", edit_bill_path(bill), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  </td>
+</tr>

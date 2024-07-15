@@ -1,0 +1,17 @@
+<tr id="<%= dom_id employee %>" class="border border-gray-200">
+  <td class="px-10 py-4 border border-gray-200 whitespace-nowrap">
+    <%= employee.full_name %>
+  </td>
+  <td class="px-10 py-4 border border-gray-200 whitespace-nowrap">
+    <%= employee.designation.titleize %>
+  </td>
+  <td class="px-10 py-4 border border-gray-200 whitespace-nowrap">
+    <%= employee.department.name %>
+  </td>
+  <td class="px-10 py-4 border border-gray-200 whitespace-nowrap">
+    <div class="flex gap-10">
+      <%= button_to "Destroy", employee, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      <%= link_to "Edit this employee", edit_employee_path(employee), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    </div>
+  </td>
+</tr>
